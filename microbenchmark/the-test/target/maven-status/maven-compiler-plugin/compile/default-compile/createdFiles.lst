@@ -1,0 +1,14 @@
+de/stuefe/repros/util/MemorySizeConverter.class
+de/stuefe/repros/metaspace/internals/InMemorySourceFile.class
+de/stuefe/repros/metaspace/internals/InMemoryJavaFileManager$1.class
+de/stuefe/repros/MiscUtils.class
+de/stuefe/repros/metaspace/internals/InMemoryClassLoader.class
+de/stuefe/repros/metaspace/internals/Utils.class
+de/stuefe/repros/metaspace/InterleaveKlassRefsInHeap.class
+de/stuefe/repros/TestCaseBase.class
+META-INF/native-image/picocli-generated/de.stuefe/repros8/resource-config.json
+de/stuefe/repros/util/MemorySize.class
+de/stuefe/repros/metaspace/internals/InMemoryClassFile.class
+de/stuefe/repros/metaspace/internals/InMemoryJavaFileManager.class
+META-INF/native-image/picocli-generated/de.stuefe/repros8/proxy-config.json
+META-INF/native-image/picocli-generated/de.stuefe/repros8/reflect-config.json

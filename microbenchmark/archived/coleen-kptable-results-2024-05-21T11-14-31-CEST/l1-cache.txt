@@ -1,0 +1,72 @@
+G1GC-16384/errlog-A.txt:4:    94265502536      L1-dcache-load-misses     #    7.93% of all L1-dcache accesses
+G1GC-16384/errlog-A.txt:5: 1188869686120      L1-dcache-loads                                             
+G1GC-16384/errlog-B.txt:4:   123701889287      L1-dcache-load-misses     #   10.32% of all L1-dcache accesses
+G1GC-16384/errlog-B.txt:5: 1198092395836      L1-dcache-loads                                             
+G1GC-512/errlog-A.txt:4:    70717441154      L1-dcache-load-misses     #    7.41% of all L1-dcache accesses
+G1GC-512/errlog-A.txt:5:   954862077183      L1-dcache-loads                                             
+G1GC-512/errlog-B.txt:4:    69096991863      L1-dcache-load-misses     #    7.24% of all L1-dcache accesses
+G1GC-512/errlog-B.txt:5:   953746311677      L1-dcache-loads                                             
+ParallelGC-8192/errlog-A.txt:4:    76830573810      L1-dcache-load-misses     #    5.33% of all L1-dcache accesses
+ParallelGC-8192/errlog-A.txt:5: 1442271302556      L1-dcache-loads                                             
+ParallelGC-8192/errlog-B.txt:4:   102430303018      L1-dcache-load-misses     #    7.04% of all L1-dcache accesses
+ParallelGC-8192/errlog-B.txt:5: 1454936784247      L1-dcache-loads                                             
+SerialGC-4096/errlog-A.txt:4:    81273192980      L1-dcache-load-misses     #   10.36% of all L1-dcache accesses
+SerialGC-4096/errlog-A.txt:5:   784708382944      L1-dcache-loads                                             
+SerialGC-4096/errlog-B.txt:4:   110271162130      L1-dcache-load-misses     #   14.05% of all L1-dcache accesses
+SerialGC-4096/errlog-B.txt:5:   785000473757      L1-dcache-loads                                             
+SerialGC-2048/errlog-A.txt:4:    78317135189      L1-dcache-load-misses     #   10.32% of all L1-dcache accesses
+SerialGC-2048/errlog-A.txt:5:   759176603858      L1-dcache-loads                                             
+SerialGC-2048/errlog-B.txt:4:    97966118120      L1-dcache-load-misses     #   12.89% of all L1-dcache accesses
+SerialGC-2048/errlog-B.txt:5:   759783134985      L1-dcache-loads                                             
+G1GC-4096/errlog-A.txt:4:    85857620729      L1-dcache-load-misses     #    8.41% of all L1-dcache accesses
+G1GC-4096/errlog-A.txt:5: 1020658759065      L1-dcache-loads                                             
+G1GC-4096/errlog-B.txt:4:   111853708158      L1-dcache-load-misses     #   10.94% of all L1-dcache accesses
+G1GC-4096/errlog-B.txt:5: 1022683325981      L1-dcache-loads                                             
+G1GC-2048/errlog-A.txt:4:    82888519088      L1-dcache-load-misses     #    8.40% of all L1-dcache accesses
+G1GC-2048/errlog-A.txt:5:   987351125265      L1-dcache-loads                                             
+G1GC-2048/errlog-B.txt:4:    99488552855      L1-dcache-load-misses     #   10.05% of all L1-dcache accesses
+G1GC-2048/errlog-B.txt:5:   989707406911      L1-dcache-loads                                             
+ParallelGC-512/errlog-A.txt:4:    57975475261      L1-dcache-load-misses     #    4.36% of all L1-dcache accesses
+ParallelGC-512/errlog-A.txt:5: 1330099742589      L1-dcache-loads                                             
+ParallelGC-512/errlog-B.txt:4:    63044036224      L1-dcache-load-misses     #    4.71% of all L1-dcache accesses
+ParallelGC-512/errlog-B.txt:5: 1337784504668      L1-dcache-loads                                             
+SerialGC-1024/errlog-A.txt:4:    72995628655      L1-dcache-load-misses     #    9.86% of all L1-dcache accesses
+SerialGC-1024/errlog-A.txt:5:   740276336011      L1-dcache-loads                                             
+SerialGC-1024/errlog-B.txt:4:    83997313580      L1-dcache-load-misses     #   11.33% of all L1-dcache accesses
+SerialGC-1024/errlog-B.txt:5:   741507968331      L1-dcache-loads                                             
+ParallelGC-4096/errlog-A.txt:4:    72757572737      L1-dcache-load-misses     #    5.26% of all L1-dcache accesses
+ParallelGC-4096/errlog-A.txt:5: 1383293469268      L1-dcache-loads                                             
+ParallelGC-4096/errlog-B.txt:4:    96896992157      L1-dcache-load-misses     #    6.94% of all L1-dcache accesses
+ParallelGC-4096/errlog-B.txt:5: 1396812011439      L1-dcache-loads                                             
+SerialGC-8192/errlog-A.txt:4:    85748243704      L1-dcache-load-misses     #   10.10% of all L1-dcache accesses
+SerialGC-8192/errlog-A.txt:5:   848585076923      L1-dcache-loads                                             
+SerialGC-8192/errlog-B.txt:4:   117704782741      L1-dcache-load-misses     #   13.97% of all L1-dcache accesses
+SerialGC-8192/errlog-B.txt:5:   842416230785      L1-dcache-loads                                             
+ParallelGC-2048/errlog-A.txt:4:    69801263220      L1-dcache-load-misses     #    5.12% of all L1-dcache accesses
+ParallelGC-2048/errlog-A.txt:5: 1362486109248      L1-dcache-loads                                             
+ParallelGC-2048/errlog-B.txt:4:    87814189581      L1-dcache-load-misses     #    6.41% of all L1-dcache accesses
+ParallelGC-2048/errlog-B.txt:5: 1370399404495      L1-dcache-loads                                             
+G1GC-8192/errlog-A.txt:4:    90261862275      L1-dcache-load-misses     #    8.26% of all L1-dcache accesses
+G1GC-8192/errlog-A.txt:5: 1092874288218      L1-dcache-loads                                             
+G1GC-8192/errlog-B.txt:4:   119755884050      L1-dcache-load-misses     #   10.93% of all L1-dcache accesses
+G1GC-8192/errlog-B.txt:5: 1095726376940      L1-dcache-loads                                             
+ParallelGC-16384/errlog-A.txt:4:    80711651465      L1-dcache-load-misses     #    5.30% of all L1-dcache accesses
+ParallelGC-16384/errlog-A.txt:5: 1524210341691      L1-dcache-loads                                             
+ParallelGC-16384/errlog-B.txt:4:   105375899443      L1-dcache-load-misses     #    6.86% of all L1-dcache accesses
+ParallelGC-16384/errlog-B.txt:5: 1536768300986      L1-dcache-loads                                             
+SerialGC-512/errlog-A.txt:4:    63624550596      L1-dcache-load-misses     #    8.71% of all L1-dcache accesses
+SerialGC-512/errlog-A.txt:5:   730218111822      L1-dcache-loads                                             
+SerialGC-512/errlog-B.txt:4:    68681779848      L1-dcache-load-misses     #    9.40% of all L1-dcache accesses
+SerialGC-512/errlog-B.txt:5:   730480552284      L1-dcache-loads                                             
+ParallelGC-1024/errlog-A.txt:4:    65142049064      L1-dcache-load-misses     #    4.86% of all L1-dcache accesses
+ParallelGC-1024/errlog-A.txt:5: 1341326301127      L1-dcache-loads                                             
+ParallelGC-1024/errlog-B.txt:4:    75606514151      L1-dcache-load-misses     #    5.60% of all L1-dcache accesses
+ParallelGC-1024/errlog-B.txt:5: 1350585373184      L1-dcache-loads                                             
+G1GC-1024/errlog-A.txt:4:    79290883158      L1-dcache-load-misses     #    8.19% of all L1-dcache accesses
+G1GC-1024/errlog-A.txt:5:   968387821416      L1-dcache-loads                                             
+G1GC-1024/errlog-B.txt:4:    83925709133      L1-dcache-load-misses     #    8.67% of all L1-dcache accesses
+G1GC-1024/errlog-B.txt:5:   968417796953      L1-dcache-loads                                             
+SerialGC-16384/errlog-A.txt:4:    90019010277      L1-dcache-load-misses     #    9.77% of all L1-dcache accesses
+SerialGC-16384/errlog-A.txt:5:   920946824636      L1-dcache-loads                                             
+SerialGC-16384/errlog-B.txt:4:   121149333455      L1-dcache-load-misses     #   13.20% of all L1-dcache accesses
+SerialGC-16384/errlog-B.txt:5:   917998573923      L1-dcache-loads                                             

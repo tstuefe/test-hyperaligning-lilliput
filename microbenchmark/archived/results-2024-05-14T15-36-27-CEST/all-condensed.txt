@@ -1,0 +1,73 @@
+**** -XX:+UseSerialGC and 512 classes ****
+GC Times, Sum, B to A: 90.53%
+GC Times, Sum, C to A: 100.98%
+GC Times, Sum, D to A: 94.01%
+**** -XX:+UseSerialGC and 1024 classes ****
+GC Times, Sum, B to A: 70.19%
+GC Times, Sum, C to A: 79.01%
+GC Times, Sum, D to A: 74.58%
+**** -XX:+UseSerialGC and 2048 classes ****
+GC Times, Sum, B to A: 81.09%
+GC Times, Sum, C to A: 89.73%
+GC Times, Sum, D to A: 71.53%
+**** -XX:+UseSerialGC and 4096 classes ****
+GC Times, Sum, B to A: 89.07%
+GC Times, Sum, C to A: 108.10%
+GC Times, Sum, D to A: 91.10%
+**** -XX:+UseSerialGC and 8192 classes ****
+GC Times, Sum, B to A: 85.60%
+GC Times, Sum, C to A: 107.25%
+GC Times, Sum, D to A: 88.74%
+**** -XX:+UseSerialGC and 16384 classes ****
+GC Times, Sum, B to A: 62.29%
+GC Times, Sum, C to A: 91.17%
+GC Times, Sum, D to A: 69.04%
+**** -XX:+UseParallelGC and 512 classes ****
+GC Times, Sum, B to A: 95.24%
+GC Times, Sum, C to A: 91.48%
+GC Times, Sum, D to A: 94.53%
+**** -XX:+UseParallelGC and 1024 classes ****
+GC Times, Sum, B to A: 91.11%
+GC Times, Sum, C to A: 88.80%
+GC Times, Sum, D to A: 90.96%
+**** -XX:+UseParallelGC and 2048 classes ****
+GC Times, Sum, B to A: 89.78%
+GC Times, Sum, C to A: 93.20%
+GC Times, Sum, D to A: 92.92%
+**** -XX:+UseParallelGC and 4096 classes ****
+GC Times, Sum, B to A: 96.93%
+GC Times, Sum, C to A: 95.63%
+GC Times, Sum, D to A: 96.60%
+**** -XX:+UseParallelGC and 8192 classes ****
+GC Times, Sum, B to A: 98.51%
+GC Times, Sum, C to A: 98.77%
+GC Times, Sum, D to A: 98.87%
+**** -XX:+UseParallelGC and 16384 classes ****
+GC Times, Sum, B to A: 86.36%
+GC Times, Sum, C to A: 94.66%
+GC Times, Sum, D to A: 88.79%
+**** -XX:+UseG1GC and 512 classes ****
+GC Times, Sum, B to A: 88.83%
+GC Times, Sum, C to A: 86.68%
+GC Times, Sum, D to A: 91.08%
+**** -XX:+UseG1GC and 1024 classes ****
+GC Times, Sum, B to A: 73.08%
+GC Times, Sum, C to A: 75.43%
+GC Times, Sum, D to A: 74.32%
+**** -XX:+UseG1GC and 2048 classes ****
+GC Times, Sum, B to A: 78.36%
+GC Times, Sum, C to A: 83.46%
+GC Times, Sum, D to A: 75.54%
+**** -XX:+UseG1GC and 4096 classes ****
+GC Times, Sum, B to A: 84.02%
+GC Times, Sum, C to A: 90.43%
+GC Times, Sum, D to A: 83.54%
+**** -XX:+UseG1GC and 8192 classes ****
+GC Times, Sum, B to A: 89.23%
+GC Times, Sum, C to A: 103.81%
+GC Times, Sum, D to A: 92.64%
+**** -XX:+UseG1GC and 16384 classes ****
+GC Times, Sum, B to A: 70.58%
+GC Times, Sum, C to A: 94.65%
+GC Times, Sum, D to A: 78.85%
+

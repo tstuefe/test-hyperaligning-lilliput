@@ -1,0 +1,124 @@
+Microbenchmark, pinned on 8 cpus
+
+--------------------------------------
+
+ParallelGC (128 classes, 400000 objects per class)
+
+22 bits gc times
+median(field-1) perc:95(field-1)
+644.432 2617.6516
+26 bits gc times
+median(field-1) perc:95(field-1)
+750.702 2760.5996
+
++16% (?)   +1% (?)
+
+22 bits gc times
+median(field-1) perc:95(field-1)
+748.053 2871.9632
+26 bits gc times
+median(field-1) perc:95(field-1)
+766.515 2796.956
+
++2.4% (?)  -2.5%
+
+22 bits gc times
+median(field-1) perc:95(field-1)
+755.312 2713.6792
+26 bits gc times
+median(field-1) perc:95(field-1)
+654.359 2759.1078
+
+-14%       +1.6% 
+
+--------------------------------------
+
+ParallelGC (512 classes, 10000 objects per class)
+
+(~10 % l1 cache misses more with 22 bit)
+
+22 bits gc times
+median(field-1) perc:95(field-1)
+812.298 2909.1688
+26 bits gc times
+median(field-1) perc:95(field-1)
+677.491 2908.7356
+
+-16.7%  +-0%
+
+22 bits gc times
+median(field-1) perc:95(field-1)
+824.581 2812.5866
+26 bits gc times
+median(field-1) perc:95(field-1)
+777.583 2982.6212
+
+-5.8%   +6% (?)
+
+de.stuefe.repros.metaspace.ManyClassesManyObjectsFullGC -C 512 -n 100000  -y --nowait
+22 bits gc times
+median(field-1) perc:95(field-1)
+808.643 2939.1466
+26 bits gc times
+median(field-1) perc:95(field-1)
+687.34  2885.3846
+
+-15%    -1.9%
+
+--------------------------------------
+
+ParallelGC (1024 classes, 50000 objects per class)
+
+22 bits gc times
+median(field-1) perc:95(field-1)
+776.952 2857.5514
+26 bits gc times
+median(field-1) perc:95(field-1)
+723.765 2634.6272
+
+-6.9%   -7.9%
+
+
+22 bits gc times
+median(field-1) perc:95(field-1)
+768.784 2993.51
+26 bits gc times
+median(field-1) perc:95(field-1)
+735.649 2646.8162
+
+-4.3%   -11.6%
+
+22 bits gc times
+median(field-1) perc:95(field-1)
+717.039 2789.2734
+26 bits gc times
+median(field-1) perc:95(field-1)
+732.727 2584.7428
+
++2%     -7.4%
+
+--------------------------------------
+
+ParallelGC (8192 classes, 6250 objects per class)
+
+22 bits gc times
+median(field-1) perc:95(field-1)
+747.018 2280.2377
+26 bits gc times
+median(field-1) perc:95(field-1)
+723.356 2281.5231
+
+
+22 bits gc times
+median(field-1) perc:95(field-1)
+760.443 2258.5302
+26 bits gc times
+median(field-1) perc:95(field-1)
+711.612 2242.0755
+
+22 bits gc times
+median(field-1) perc:95(field-1)
+744.31  2253.8985
+26 bits gc times
+median(field-1) perc:95(field-1)
+731.321 2291.9166

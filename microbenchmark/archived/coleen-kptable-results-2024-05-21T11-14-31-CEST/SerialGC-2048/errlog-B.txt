@@ -1,0 +1,16 @@
+
+ Performance counter stats for '/shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-coleen-klasstable-ON/bin/java -XX:+UseSerialGC -XX:+IgnoreUnrecognizedVMOptions -Xshare:off -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 2048 -n 32768 --cycles 100 --randomize -y --nowait':
+
+    97,966,118,120      L1-dcache-load-misses     #   12.89% of all L1-dcache accesses
+   759,783,134,985      L1-dcache-loads                                             
+   <not supported>      LLC-load-misses                                             
+   <not supported>      LLC-loads                                                   
+       331,413,518      dTLB-load-misses          #    2.31% of all dTLB cache accesses
+    14,328,651,393      dTLB-loads                                                  
+
+     286.204139925 seconds time elapsed
+
+     280.032980000 seconds user
+       2.303434000 seconds sys
+
+

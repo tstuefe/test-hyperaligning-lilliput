@@ -1,0 +1,31 @@
+[
+  {
+    "name" : "de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "auto_yes" },
+      { "name" : "classStride" },
+      { "name" : "cycles" },
+      { "name" : "nowait" },
+      { "name" : "numClasses" },
+      { "name" : "numObjectsPerClass" },
+      { "name" : "printHashes" },
+      { "name" : "randomize" },
+      { "name" : "verbose" }
+    ]
+  },
+  {
+    "name" : "picocli.CommandLine$AutoHelpMixin",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "fields" : [
+      { "name" : "helpRequested" },
+      { "name" : "versionRequested" }
+    ]
+  }
+]

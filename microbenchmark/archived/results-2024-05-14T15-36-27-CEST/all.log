@@ -1,0 +1,378 @@
+**** -XX:+UseSerialGC and 512 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 512 -n 131072 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 512 -n 131072 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 512 -n 131072 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 512 -n 131072 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	217390.588	2137.323	175.85124605385
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	196823.74	1925.933	185.46432109446
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	219525.767	2151.823	170.07816971112
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	204376.167	2007.647	181.69572730216
+GC Times, Sum, B to A: 90.53%
+GC Times, Sum, C to A: 100.98%
+GC Times, Sum, D to A: 94.01%
+GC Times, Standard Deviation, A: +-175.85124605385 (+-8.22%)
+**** -XX:+UseSerialGC and 1024 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 1024 -n 65536 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 1024 -n 65536 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 1024 -n 65536 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 1024 -n 65536 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	299807.218	2951.4565	219.09037330378
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	210463.354	2060.0825	168.72323512264
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	236903.682	2325.0355	162.71667628793
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	223621.19	2193.141	175.63292698691
+GC Times, Sum, B to A: 70.19%
+GC Times, Sum, C to A: 79.01%
+GC Times, Sum, D to A: 74.58%
+GC Times, Standard Deviation, A: +-219.09037330378 (+-7.42%)
+**** -XX:+UseSerialGC and 2048 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 2048 -n 32768 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 2048 -n 32768 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 2048 -n 32768 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 2048 -n 32768 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	340434.414	3335.4545	256.42124309181
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	276074.307	2726.5285	218.74799926202
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	305505.567	3011.989	201.2326427154
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	243525.715	2356.087	231.48846301568
+GC Times, Sum, B to A: 81.09%
+GC Times, Sum, C to A: 89.73%
+GC Times, Sum, D to A: 71.53%
+GC Times, Standard Deviation, A: +-256.42124309181 (+-7.68%)
+**** -XX:+UseSerialGC and 4096 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 4096 -n 16384 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 4096 -n 16384 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 4096 -n 16384 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 4096 -n 16384 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	319871.332	3136.895	244.6114109922
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	284919.832	2824.8315	192.35837631563
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	345784.728	3387.983	226.49844453405
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	291421.01	2875.3525	199.11425613433
+GC Times, Sum, B to A: 89.07%
+GC Times, Sum, C to A: 108.10%
+GC Times, Sum, D to A: 91.10%
+GC Times, Standard Deviation, A: +-244.6114109922 (+-7.79%)
+**** -XX:+UseSerialGC and 8192 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 8192 -n 8192 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 8192 -n 8192 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 8192 -n 8192 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 8192 -n 8192 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	374921.748	3735.854	162.12625229917
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	320935.931	3163.3845	166.10633679863
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	402129.573	3971.9945	200.18224412335
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	332720.037	3243.281	201.85261946315
+GC Times, Sum, B to A: 85.60%
+GC Times, Sum, C to A: 107.25%
+GC Times, Sum, D to A: 88.74%
+GC Times, Standard Deviation, A: +-162.12625229917 (+-4.33%)
+**** -XX:+UseSerialGC and 16384 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 16384 -n 4096 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 16384 -n 4096 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 16384 -n 4096 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseSerialGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 16384 -n 4096 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	579707.513	5702.6665	376.60565441827
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	361156.056	3492.7135	327.43758834288
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	528566.009	5192.6005	335.78960203372
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	400279.697	3935.8375	243.93585164375
+GC Times, Sum, B to A: 62.29%
+GC Times, Sum, C to A: 91.17%
+GC Times, Sum, D to A: 69.04%
+GC Times, Standard Deviation, A: +-376.60565441827 (+-6.60%)
+**** -XX:+UseParallelGC and 512 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 512 -n 131072 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 512 -n 131072 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 512 -n 131072 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 512 -n 131072 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	74064.939	658.1365	398.48888922522
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	70542.251	622.101	382.64886125111
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	67758.229	596.8435	369.75665136969
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	70019.948	625.2115	375.71597274882
+GC Times, Sum, B to A: 95.24%
+GC Times, Sum, C to A: 91.48%
+GC Times, Sum, D to A: 94.53%
+GC Times, Standard Deviation, A: +-398.48888922522 (+-60.54%)
+**** -XX:+UseParallelGC and 1024 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 1024 -n 65536 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 1024 -n 65536 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 1024 -n 65536 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 1024 -n 65536 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	79292.105	702.5065	422.37444128483
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	72247.997	627.7005	391.65110671698
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	70416.071	607.263	383.1898518767
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	72124.985	633.9135	389.14833830783
+GC Times, Sum, B to A: 91.11%
+GC Times, Sum, C to A: 88.80%
+GC Times, Sum, D to A: 90.96%
+GC Times, Standard Deviation, A: +-422.37444128483 (+-60.12%)
+**** -XX:+UseParallelGC and 2048 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 2048 -n 32768 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 2048 -n 32768 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 2048 -n 32768 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 2048 -n 32768 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	84509.822	750.8805	441.47356575307
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	75873.374	652.823	408.88405196376
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	78765.036	684.206	410.61601765783
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	78531.498	670.924	418.9574769331
+GC Times, Sum, B to A: 89.78%
+GC Times, Sum, C to A: 93.20%
+GC Times, Sum, D to A: 92.92%
+GC Times, Standard Deviation, A: +-441.47356575307 (+-58.79%)
+**** -XX:+UseParallelGC and 4096 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 4096 -n 16384 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 4096 -n 16384 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 4096 -n 16384 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 4096 -n 16384 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	100344.944	782.831	515.07144051982
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	97273.87	815.135	494.93615381978
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	95960.716	779.981	493.77697245155
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	96941.899	767.3595	490.71036585232
+GC Times, Sum, B to A: 96.93%
+GC Times, Sum, C to A: 95.63%
+GC Times, Sum, D to A: 96.60%
+GC Times, Standard Deviation, A: +-515.07144051982 (+-65.79%)
+**** -XX:+UseParallelGC and 8192 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 8192 -n 8192 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 8192 -n 8192 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 8192 -n 8192 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 8192 -n 8192 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	91390.748	427.2485	457.2309870586
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	90030.719	397.278	450.95817669345
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	90268.744	425.0825	451.65781898271
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	90358.76	420.896	452.33812786965
+GC Times, Sum, B to A: 98.51%
+GC Times, Sum, C to A: 98.77%
+GC Times, Sum, D to A: 98.87%
+GC Times, Standard Deviation, A: +-457.2309870586 (+-107.01%)
+**** -XX:+UseParallelGC and 16384 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 16384 -n 4096 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 16384 -n 4096 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 16384 -n 4096 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseParallelGC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 16384 -n 4096 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	76037.342	611.187	381.99288554894
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	65672.584	503.9215	330.71132110034
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	71982.781	583.0075	361.76487543393
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+200	67513.834	525.2735	339.19181642844
+GC Times, Sum, B to A: 86.36%
+GC Times, Sum, C to A: 94.66%
+GC Times, Sum, D to A: 88.79%
+GC Times, Standard Deviation, A: +-381.99288554894 (+-62.50%)
+**** -XX:+UseG1GC and 512 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 512 -n 131072 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 512 -n 131072 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 512 -n 131072 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 512 -n 131072 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	37759.68	372.823	21.165454381414
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	33543.063	332.649	21.230912542968
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	32730.353	324.251	18.270062519703
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	34393.946	341.0335	19.80312035836
+GC Times, Sum, B to A: 88.83%
+GC Times, Sum, C to A: 86.68%
+GC Times, Sum, D to A: 91.08%
+GC Times, Standard Deviation, A: +-21.165454381414 (+-5.67%)
+**** -XX:+UseG1GC and 1024 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 1024 -n 65536 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 1024 -n 65536 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 1024 -n 65536 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 1024 -n 65536 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	49300.141	489.278	25.54062616956
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	36032.046	357.3665	21.924036978226
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	37191.1	366.4425	23.343522845284
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	36639.937	364.672	21.228101811473
+GC Times, Sum, B to A: 73.08%
+GC Times, Sum, C to A: 75.43%
+GC Times, Sum, D to A: 74.32%
+GC Times, Standard Deviation, A: +-25.54062616956 (+-5.22%)
+**** -XX:+UseG1GC and 2048 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 2048 -n 32768 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 2048 -n 32768 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 2048 -n 32768 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 2048 -n 32768 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	54550.96	542.27	26.035038302141
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	42748.761	423.9595	24.384303645183
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	45528.677	457.3255	16.921703670978
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	41209.746	411.6965	21.105828294774
+GC Times, Sum, B to A: 78.36%
+GC Times, Sum, C to A: 83.46%
+GC Times, Sum, D to A: 75.54%
+GC Times, Standard Deviation, A: +-26.035038302141 (+-4.80%)
+**** -XX:+UseG1GC and 4096 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 4096 -n 16384 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 4096 -n 16384 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 4096 -n 16384 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 4096 -n 16384 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	59684.789	593.9185	24.103642715144
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	50151.833	497.8165	16.6435605481
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	53975.162	537.726	18.322207376489
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	49861.255	496.6095	14.790832230412
+GC Times, Sum, B to A: 84.02%
+GC Times, Sum, C to A: 90.43%
+GC Times, Sum, D to A: 83.54%
+GC Times, Standard Deviation, A: +-24.103642715144 (+-4.05%)
+**** -XX:+UseG1GC and 8192 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 8192 -n 8192 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 8192 -n 8192 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 8192 -n 8192 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 8192 -n 8192 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	62697.799	624.666	21.208110093721
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	55948.724	560.1185	21.974860951569
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	65088.635	646.53	24.720111572341
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	58083.578	578.25	22.099149457823
+GC Times, Sum, B to A: 89.23%
+GC Times, Sum, C to A: 103.81%
+GC Times, Sum, D to A: 92.64%
+GC Times, Standard Deviation, A: +-21.208110093721 (+-3.39%)
+**** -XX:+UseG1GC and 16384 classes ****
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-OFF/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 16384 -n 4096 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-26bit-staggered-klass-OFF/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 16384 -n 4096 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-klasstable-ON/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 16384 -n 4096 --cycles 100 --randomize -y --nowait
+Running chrt -r 1 taskset 0xFF00  /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/../jdk-22bit-staggered-klass-ON/bin/java  -XX:+UseG1GC -Xmx6g -Xms6g -XX:+AlwaysPreTouch -XX:MetaspaceSize=3g -Xlog:gc -Xlog:metaspace* -XX:CompressedClassSpaceSize=3g -XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders   -cp /shared/projects/openjdk/benchmarks/test-hyperaligning-lilliput/microbenchmark/the-test/target/repros8-1.0.jar de.stuefe.repros.metaspace.InterleaveKlassRefsInHeap -C 16384 -n 4096 --cycles 100 --randomize -y --nowait
+A (22 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	86827.051	862.76	34.371894073382
+B (26 bit) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	61288.54	612.4395	21.599325652586
+C (22 bit, with klass indirection table) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	82189.051	824.2245	40.739804406758
+D (22 bit, with staggered Klass locations) gc times 
+count(field-1)	sum(field-1)	median(field-1)	sstdev(field-1)
+100	68467.882	681.761	30.079508321047
+GC Times, Sum, B to A: 70.58%
+GC Times, Sum, C to A: 94.65%
+GC Times, Sum, D to A: 78.85%
+GC Times, Standard Deviation, A: +-34.371894073382 (+-3.98%)
