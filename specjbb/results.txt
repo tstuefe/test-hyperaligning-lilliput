@@ -1,0 +1,96 @@
+SpecJBB 24-05-15
+
+A (jdk-22bit-staggered-klass-OFF) gc times 
+count(field-1)  sum(field-1)    median(field-1) sstdev(field-1)
+1590    226564.719      150.39  53.032881440055
+
+B (jdk-26bit-staggered-klass-OFF) gc times 
+count(field-1)  sum(field-1)    median(field-1) sstdev(field-1)
+1691    246239.555      153.637 52.627610931371
+
+C (jdk-22bit-klasstable-ON) gc times 
+count(field-1)  sum(field-1)    median(field-1) sstdev(field-1)
+1673    236226.498      149.689 52.462382619467
+
+D (jdk-22bit-staggered-klass-ON) gc times 
+count(field-1)  sum(field-1)    median(field-1) sstdev(field-1)
+1566    217960.642      147.197 52.98456379394
+
+GC Times, Sum, B to A: 108.68%
+GC Times, Sum, C to A: 104.26%
+GC Times, Sum, D to A: 96.20%
+
+
+-------------------------
+
+SpecJBB 24-05-16
+
+A (jdk-22bit-staggered-klass-OFF) gc times 
+count(field-1)  sum(field-1)    median(field-1) sstdev(field-1)
+1839    264686.867      152.39  52.042345111363
+
+B (jdk-26bit-staggered-klass-OFF) gc times 
+count(field-1)  sum(field-1)    median(field-1) sstdev(field-1)
+1760    253796.094      151.985 56.914760429051
+
+C (jdk-22bit-klasstable-ON) gc times 
+count(field-1)  sum(field-1)    median(field-1) sstdev(field-1)
+1727    243935.144      149.66  52.995051836248
+
+D (jdk-22bit-staggered-klass-ON) gc times 
+count(field-1)  sum(field-1)    median(field-1) sstdev(field-1)
+1784    249647.434      147.518 54.397465664214
+
+GC Times, Sum, B to A: 95.88%
+GC Times, Sum, C to A: 92.15%
+GC Times, Sum, D to A: 94.31%
+
+
+-------------------------
+
+SpecJBB 24-05-22
+
+A (jdk-22bit-staggered-klass-OFF) gc times 
+count(field-1)  sum(field-1)    median(field-1) sstdev(field-1)
+1370    227400.577      169.943 59.680211600245
+
+B (jdk-26bit-staggered-klass-OFF) gc times 
+count(field-1)  sum(field-1)    median(field-1) sstdev(field-1)
+1347    220614.713      168.011 51.044281160257
+
+C (jdk-22bit-klasstable-ON) gc times 
+count(field-1)  sum(field-1)    median(field-1) sstdev(field-1)
+1270    205244.728      165.7985        51.618351377484
+
+D (jdk-22bit-staggered-klass-ON) gc times 
+count(field-1)  sum(field-1)    median(field-1) sstdev(field-1)
+1247    196584.109      161.525 51.618500913768
+
+GC Times, Sum, B to A: 97.01%
+GC Times, Sum, C to A: 90.25%
+GC Times, Sum, D to A: 86.44%
+
+perf stat:
+
+A (jdk-22bit-staggered-klass-OFF) 
+10960: 1876258035284      L1-dcache-load-misses            #    7.38% of all L1-dcache accesses   (37.81%)
+
+B (jdk-26bit-staggered-klass-OFF)
+10396: 1876852200102      L1-dcache-load-misses  (+3,1%)   #    7.48% of all L1-dcache accesses   (37.83%)
+
+C (jdk-22bit-klasstable-ON)
+10134: 1808479829790      L1-dcache-load-misses  (-3.6%)   #    7.62% of all L1-dcache accesses   (37.50%)
+
+D (jdk-22bit-staggered-klass-ON) 
+10085: 1730528166388      L1-dcache-load-misses  (-7.8%)   #    7.43% of all L1-dcache accesses   (37.73%)
+
+
+-----------------
+
+| Run | 1       | 2       | 3      |
+|-----|---------|---------|--------|
+| B   | 108.68% | 95.88%  | 97.01% |
+| C   | 104.26% | 92.15%  | 90.25% |
+| D   | 96.20%  | 94.31%  | 86.44% |
+
+Avg B: 100,52%, C: 95,55%, D: 92,31%

@@ -1,0 +1,8 @@
+jdk-22bit-klasstable-ON-24-05-22_130258/composite.log:10134: 1,808,479,829,790      L1-dcache-load-misses            #    7.62% of all L1-dcache accesses   (37.50%)
+jdk-22bit-klasstable-ON-24-05-22_130258/composite.log:10135:23,738,525,234,111      L1-dcache-loads                                                         (36.34%)
+jdk-22bit-staggered-klass-ON-24-05-22_151837/composite.log:10085: 1,730,528,166,388      L1-dcache-load-misses            #    7.43% of all L1-dcache accesses   (37.73%)
+jdk-22bit-staggered-klass-ON-24-05-22_151837/composite.log:10086:23,290,345,133,919      L1-dcache-loads                                                         (36.44%)
+jdk-26bit-staggered-klass-OFF-24-05-22_082044/composite.log:10396: 1,876,852,200,102      L1-dcache-load-misses            #    7.48% of all L1-dcache accesses   (37.83%)
+jdk-26bit-staggered-klass-OFF-24-05-22_082044/composite.log:10397:25,091,400,800,084      L1-dcache-loads                                                         (36.52%)
+jdk-22bit-staggered-klass-OFF-24-05-22_104045/composite.log:10960: 1,876,258,035,284      L1-dcache-load-misses            #    7.38% of all L1-dcache accesses   (37.81%)
+jdk-22bit-staggered-klass-OFF-24-05-22_104045/composite.log:10961:25,410,756,219,762      L1-dcache-loads                                                         (36.46%)

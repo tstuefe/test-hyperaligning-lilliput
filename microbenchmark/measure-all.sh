@@ -19,7 +19,7 @@ touch "$BASE_LOG"
 
 for USEGC in "-XX:+UseSerialGC" "-XX:+UseParallelGC" "-XX:+UseG1GC" ; do
 	export USEGC
-	for NUM_CLASSES in 512 1024 2048 4096 8192 16384 32768; do
+	for NUM_CLASSES in 512 1024 2048 4096 8192 16384 ; do
 		echo "**** $USEGC and $NUM_CLASSES classes ****" >> "$BASE_LOG"
 		export NUM_CLASSES
 
